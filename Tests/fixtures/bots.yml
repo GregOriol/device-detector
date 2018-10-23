@@ -439,8 +439,8 @@
   user_agent: collectd/5.5.1
   bot:
     name: Collectd
-    category: Site Monitor
     url: https://collectd.org/
+    category: Site Monitor
     producer:
       name: Collectd
       url: https://collectd.org/
@@ -752,11 +752,23 @@
   bot:
     name: Generic Bot
 - 
+  user_agent: help@dataminr.com
+  bot:
+    name: Generic Bot
+- 
   user_agent: 'HybridBot (hybrid.ru/about. If our bot caused problems please contact us. Contact email: m.lyashkov@targetix.net)'
   bot:
     name: Generic Bot
 - 
+  user_agent: Mozilla/5.0 (compatible; +http://tweetedtimes.com)
+  bot:
+    name: Generic Bot
+- 
   user_agent: Mozilla/5.0 (compatible; Shareaholicbot/2.0; +http://www.shareaholic.com/bot)
+  bot:
+    name: Generic Bot
+- 
+  user_agent: Mozilla/5.0 (compatible; TrendsmapResolver/0.1)
   bot:
     name: Generic Bot
 - 
@@ -965,7 +977,16 @@
     producer:
       name: Google Inc.
       url: http://www.google.com
-- 
+-
+  user_agent: 'AppEngine-Google; (+http://code.google.com/appengine; appid: s~snapchat-proxy)'
+  bot:
+    name: Snapchat Proxy
+    category: Crawler
+    url: https://www.snapchat.com
+    producer:
+      name: Snapchat Inc.
+      url: https://www.snapchat.com
+-
   user_agent: Mediapartners-Google
   bot:
     name: Googlebot
@@ -985,6 +1006,15 @@
       url: http://www.google.com
 - 
   user_agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+  bot:
+    name: Googlebot
+    category: Search bot
+    url: http://www.google.com/bot.html
+    producer:
+      name: Google Inc.
+      url: http://www.google.com
+- 
+  user_agent: Mozilla/5.0 (en-US) AppleWebKit/537.36 (KHTML, like Gecko; Google-Assess) Chrome/34.0.1847.116 Safari/537.36
   bot:
     name: Googlebot
     category: Search bot
@@ -1687,6 +1717,15 @@
   user_agent: Octopus 1.0.2
   bot:
     name: Octopus
+- 
+  user_agent: omgili/0.5 +http://omgili.com
+  bot:
+    name: Omgili bot
+    category: Search bot
+    url: http://www.omgili.com/Crawler.html
+    producer:
+      name: Omgili
+      url: http://www.omgili.com
 - 
   user_agent: omgilibot/0.3 +http://www.omgili.com/Crawler.html
   bot:
@@ -2564,6 +2603,12 @@
       name: WeSEE Ltd
       url: http://www.wesee.com
 - 
+  user_agent: Mozilla/5.0 (Linux; Android 6.0.1; Moto G (4) Build/MPJ24.139-64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.146 Mobile Safari/537.36 PTST/180829.190838
+  bot:
+    name: WebPageTest
+    category: Site Monitor
+    url: https://www.webpagetest.org
+- 
   user_agent: websitepulse checker/1.1 (compatible; MSIE 5.5; Netscape 4.75; Linux)
   bot:
     name: WebSitePulse
@@ -3001,8 +3046,8 @@
   user_agent: masscan/1.0 (https://github.com/robertdavidgraham/masscan)
   bot:
     name: masscan
-    category: Crawler
     url: https://github.com/robertdavidgraham/masscan
+    category: Crawler
     producer:
       name: Robert Graham
       url: https://github.com/robertdavidgraham
