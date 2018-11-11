@@ -2879,7 +2879,7 @@ Goly:
 
 # Google
 Google:
-  regex: 'Nexus|GoogleTV|Glass|CrKey[^a-z0-9]|Pixel Build|Pixel (?:XL|C|2|2 XL) Build'
+  regex: 'Nexus|GoogleTV|Glass|CrKey[^a-z0-9]|Pixel Build|Pixel (?:XL|C|2|[23] XL)'
   device: 'smartphone'
   models:
     - regex: 'Glass'
@@ -2904,6 +2904,8 @@ Google:
       model: 'Pixel'
     - regex: 'Pixel XL'
       model: 'Pixel XL'
+    - regex: 'Pixel 3 XL'
+      model: 'Pixel 3 XL'
     - regex: 'Pixel 2 XL'
       model: 'Pixel 2 XL'
     - regex: 'Pixel 2'
@@ -6832,6 +6834,20 @@ Tolino:
   regex: 'Tolino Tab ([^/;]+) Build'
   device: 'tablet'
   model: 'Tolino Tab $1'
+
+# Top House
+Top House:
+  regex: 'Coto[_ ]|X1013'
+  device: 'smartphone'
+  models:
+    - regex: 'Coto W418'
+      model: 'Coto W418'
+    - regex: 'COTO_T117'
+      model: 'Coto T117'
+      device: 'tablet'
+    - regex: 'X1013'
+      model: 'X1013'
+      device: 'tablet'
 
 # Toplux
 Toplux:
