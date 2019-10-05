@@ -27,6 +27,7 @@ class Browser extends ClientParserAbstract
      * @var array
      */
     protected static $availableBrowsers = array(
+        '2B' => '2345 Browser',
         '36' => '360 Phone Browser',
         '3B' => '360 Browser',
         'AA' => 'Avant Browser',
@@ -58,6 +59,7 @@ class Browser extends ClientParserAbstract
         'CD' => 'Comodo Dragon',
         'C1' => 'Coast',
         'CX' => 'Charon',
+        'CE' => 'CM Browser',
         'CF' => 'Chrome Frame',
         'HC' => 'Headless Chrome',
         'CH' => 'Chrome',
@@ -71,22 +73,27 @@ class Browser extends ClientParserAbstract
         'CY' => 'Cyberfox',
         'CS' => 'Cheshire',
         'CU' => 'Cunaguaro',
+        'CV' => 'Chrome Webview',
         'DB' => 'dbrowser',
         'DE' => 'Deepnet Explorer',
         'DF' => 'Dolphin',
         'DO' => 'Dorado',
         'DL' => 'Dooble',
         'DI' => 'Dillo',
+        'DD' => 'DuckDuckGo Privacy Browser',
+        'EC' => 'Ecosia',
         'EI' => 'Epic',
         'EL' => 'Elinks',
         'EB' => 'Element Browser',
         'EP' => 'GNOME Web',
         'ES' => 'Espial TV Browser',
+        'F1' => 'Firefox Mobile iOS',
         'FB' => 'Firebird',
         'FD' => 'Fluid',
         'FE' => 'Fennec',
         'FF' => 'Firefox',
         'FK' => 'Firefox Focus',
+        'FR' => 'Firefox Rocket',
         'FL' => 'Flock',
         'FM' => 'Firefox Mobile',
         'FW' => 'Fireweb',
@@ -94,11 +101,12 @@ class Browser extends ClientParserAbstract
         'GA' => 'Galeon',
         'GE' => 'Google Earth',
         'HJ' => 'HotJava',
-        'IA' => 'Iceape',
         'IB' => 'IBrowse',
         'IC' => 'iCab',
         'I2' => 'iCab Mobile',
         'I1' => 'Iridium',
+        'I3' => 'Iron Mobile',
+        'I4' => 'IceCat',
         'ID' => 'IceDragon',
         'IV' => 'Isivioo',
         'IW' => 'Iceweasel',
@@ -111,9 +119,11 @@ class Browser extends ClientParserAbstract
         'KM' => 'K-meleon',
         'KO' => 'Konqueror',
         'KP' => 'Kapiko',
+        'KW' => 'Kiwi',
         'KY' => 'Kylo',
         'KZ' => 'Kazehakase',
         'LB' => 'Liebao',
+        'LF' => 'LieBaoFast',
         'LG' => 'LG Browser',
         'LI' => 'Links',
         'LU' => 'LuaKit',
@@ -124,8 +134,10 @@ class Browser extends ClientParserAbstract
         'ME' => 'Mercury',
         'MF' => 'Mobile Safari',
         'MI' => 'Midori',
+        'MO' => 'Mobicip',
         'MU' => 'MIUI Browser',
         'MS' => 'Mobile Silk',
+        'MT' => 'Mint Browser',
         'MX' => 'Maxthon',
         'NB' => 'Nokia Browser',
         'NO' => 'Nokia OSS Browser',
@@ -136,10 +148,13 @@ class Browser extends ClientParserAbstract
         'NP' => 'NetPositive',
         'NS' => 'Netscape',
         'NT' => 'NTENT Browser',
+        'O1' => 'Opera Mini iOS',
         'OB' => 'Obigo',
         'OD' => 'Odyssey Web Browser',
         'OF' => 'Off By One',
         'OE' => 'ONE Browser',
+        'OG' => 'Opera Neon',
+        'OH' => 'Opera Devices',
         'OI' => 'Opera Mini',
         'OM' => 'Opera Mobile',
         'OP' => 'Opera',
@@ -160,10 +175,12 @@ class Browser extends ClientParserAbstract
         'PO' => 'Polaris',
         'PT' => 'Polarity',
         'PS' => 'Microsoft Edge',
+        'Q1' => 'QQ Browser Mini',
         'QQ' => 'QQ Browser',
         'QT' => 'Qutebrowser',
         'QZ' => 'QupZilla',
         'QM' => 'Qwant Mobile',
+        'QW' => 'QtWebEngine',
         'RK' => 'Rekonq',
         'RM' => 'RockMelt',
         'SB' => 'Samsung Browser',
@@ -175,25 +192,33 @@ class Browser extends ClientParserAbstract
         'SK' => 'Skyfire',
         'SS' => 'Seraphic Sraf',
         'SL' => 'Sleipnir',
-        'SM' => 'SeaMonkey',
         'SN' => 'Snowshoe',
+        'SO' => 'Sogou Mobile Browser',
         'SR' => 'Sunrise',
         'SP' => 'SuperBird',
         'ST' => 'Streamy',
         'SX' => 'Swiftfox',
+        'SZ' => 'Seznam Browser',
         'TF' => 'TenFourFox',
         'TB' => 'Tenta Browser',
         'TZ' => 'Tizen Browser',
         'TS' => 'TweakStyle',
         'UC' => 'UC Browser',
+        'UM' => 'UC Browser Mini',
         'VI' => 'Vivaldi',
         'VB' => 'Vision Mobile Browser',
+        'WP' => 'Web Explorer',
         'WE' => 'WebPositive',
         'WF' => 'Waterfox',
+        'WH' => 'Whale Browser',
         'WO' => 'wOSBrowser',
         'WT' => 'WeTab Browser',
         'YA' => 'Yandex Browser',
         'XI' => 'Xiino'
+
+        // detected browsers in older versions
+        // 'IA' => 'Iceape',  => pim
+        // 'SM' => 'SeaMonkey',  => pim
     );
 
     /**
@@ -206,15 +231,15 @@ class Browser extends ClientParserAbstract
         'BlackBerry Browser' => array('BB'),
         'Baidu'              => array('BD', 'BS'),
         'Amiga'              => array('AV', 'AW'),
-        'Chrome'             => array('CH', 'BA', 'BR', 'CC', 'CD', 'CM', 'CI', 'CF', 'CN', 'CR', 'CP', 'IR', 'RM', 'AO', 'TS', 'VI', 'PT', 'AS', 'TB', 'AD'),
-        'Firefox'            => array('FF', 'FE', 'FM', 'SX', 'FB', 'PX', 'MB', 'EI', 'WF', 'CU', 'TF', 'QM'),
+        'Chrome'             => array('CH', 'BA', 'BR', 'CC', 'CD', 'CM', 'CI', 'CF', 'CN', 'CR', 'CP', 'DD', 'IR', 'RM', 'AO', 'TS', 'VI', 'PT', 'AS', 'TB', 'AD', 'SB', 'WP', 'I3', 'CV', 'WH', 'SZ', 'QW', 'LF', 'KW', '2B', 'CE', 'EC', 'MT', 'MS'),
+        'Firefox'            => array('FF', 'FE', 'FM', 'SX', 'FB', 'PX', 'MB', 'EI', 'WF', 'CU', 'TF', 'QM', 'FR', 'I4', 'GZ', 'MO', 'F1'),
         'Internet Explorer'  => array('IE', 'IM', 'PS'),
         'Konqueror'          => array('KO'),
         'NetFront'           => array('NF'),
         'NetSurf'            => array('NE'),
         'Nokia Browser'      => array('NB', 'NO', 'NV', 'DO'),
-        'Opera'              => array('OP', 'OM', 'OI', 'ON', 'OO'),
-        'Safari'             => array('SF', 'MF'),
+        'Opera'              => array('OP', 'OM', 'OI', 'ON', 'OO', 'OG', 'OH', 'O1'),
+        'Safari'             => array('SF', 'MF', 'SO'),
         'Sailfish Browser'   => array('SA')
     );
 
@@ -224,7 +249,7 @@ class Browser extends ClientParserAbstract
      * @var array
      */
     protected static $mobileOnlyBrowsers = array(
-        '36', 'PU', 'SK', 'MF', 'OI', 'OM', 'DB', 'ST', 'BL', 'IV', 'FM', 'C1', 'AL', 'SA'
+        '36', 'PU', 'SK', 'MF', 'OI', 'OM', 'DD', 'DB', 'ST', 'BL', 'IV', 'FM', 'C1', 'AL', 'SA', 'SB', 'FR', 'WP'
     );
 
     /**
@@ -303,7 +328,7 @@ class Browser extends ClientParserAbstract
         }
 
         // This Exception should never be thrown. If so a defined browser name is missing in $availableBrowsers
-        throw new \Exception('Detected browser name was not found in $availableBrowsers'); // @codeCoverageIgnore
+        throw new \Exception(sprintf('Detected browser name "%s" was not found in $availableBrowsers. Tried to parse user agent: %s', $name, $this->userAgent)); // @codeCoverageIgnore
     }
 
     protected function buildEngine($engineData, $browserVersion)
