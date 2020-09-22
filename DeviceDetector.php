@@ -50,7 +50,7 @@ class DeviceDetector
     /**
      * Current version number of DeviceDetector
      */
-    const VERSION = '3.12.6';
+    const VERSION = '3.13.0';
 
     /**
      * Holds all registered client types
@@ -181,6 +181,7 @@ class DeviceDetector
         $this->addClientParser('Library');
 
         $this->addDeviceParser('HbbTv');
+        $this->addDeviceParser('Notebook');
         $this->addDeviceParser('Console');
         $this->addDeviceParser('CarBrowser');
         $this->addDeviceParser('Camera');
