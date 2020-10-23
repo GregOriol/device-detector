@@ -124,6 +124,7 @@ class Browser extends ClientParserAbstract
         'GA' => 'Galeon',
         'GB' => 'Glass Browser',
         'GE' => 'Google Earth',
+        'GO' => 'GOG Galaxy',
         'HA' => 'Hawk Turbo Browser',
         'HO' => 'hola! Browser',
         'HJ' => 'HotJava',
@@ -436,7 +437,6 @@ class Browser extends ClientParserAbstract
     protected function buildEngineVersion($engine)
     {
         $engineVersionParser = new Engine\Version($this->userAgent, $engine);
-
         return $engineVersionParser->parse();
     }
 }
