@@ -275,7 +275,6 @@ abstract class AbstractParser
      */
     protected function buildByMatch(string $item, array $matches): string
     {
-
         $search  = [];
         $replace = [];
 
