@@ -275,21 +275,32 @@ abstract class AbstractParser
      */
     protected function buildByMatch(string $item, array $matches): string
     {
+
         $search  = [];
         $replace = [];
 
-        for ($nb = 1; $nb <= \count($matches); $nb++) {
-            $search[]  = '$' . $nb;
-            $replace[] = $matches[$nb] ?? '';
+        for ($nb = 1; $nb <= 4; $nb++) {
+            $match = $matches[$nb] ?? '';
 
-            $search[]  = '$u' . $nb;
-            $replace[] = \strtoupper($matches[$nb] ?? '');
+            if (\strpos($item, '$' . $nb) !== false) {
+                $search[]  = '$' . $nb;
+                $replace[] = $match;
+            }
 
-            $search[]  = '$l' . $nb;
-            $replace[] = \strtolower($matches[$nb] ?? '');
+            if (\strpos($item, '$u' . $nb) !== false) {
+                $search[]  = '$u' . $nb;
+                $replace[] = \strtoupper($match);
+            }
 
-            $search[]  = '$uf' . $nb;
-            $replace[] = \ucfirst($matches[$nb] ?? '');
+            if (\strpos($item, '$l' . $nb) !== false) {
+                $search[]  = '$l' . $nb;
+                $replace[] = \strtolower($match);
+            }
+
+            if (\strpos($item, '$uf' . $nb) !== false) {
+                $search[]  = '$uf' . $nb;
+                $replace[] = \ucfirst($match);
+            }
         }
 
         return \trim(\str_replace($search, $replace, $item));
