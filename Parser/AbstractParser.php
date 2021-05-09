@@ -278,7 +278,7 @@ abstract class AbstractParser
         $search  = [];
         $replace = [];
 
-        for ($nb = 1; $nb <= 4; $nb++) {
+        for ($nb = 1; $nb <= 6; $nb++) {
             $match = $matches[$nb] ?? '';
 
             if (\strpos($item, '$' . $nb) !== false) {
