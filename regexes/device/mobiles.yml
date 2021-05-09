@@ -11065,11 +11065,11 @@ Motorola:
       model: 'Moto G$1'
 
     - regex: 'Moto ([CGEXZ]) ?\(([a-z0-9]+)\)( Plus| Play)?'
-      model: 'Moto $1$2$3'
+      model: 'Moto $u1$2$uf3'
     - regex: 'Moto ?([CGEXZ])([0-9]+)( Plus| Play)?'
-      model: 'Moto $1$2$3'
-    - regex: '(?:Motorola-)?Moto[ _]?([CGEXZ])([ _](?:Plus|Play))?'
-      model: 'Moto $1$2'
+      model: 'Moto $u1$2$uf3'
+    - regex: 'Moto ?([CGEXZ])( Plus| Play)?'
+      model: 'Moto $u1$uf2'
     - regex: 'MotoroiX'
       model: 'MotoroiX'
 

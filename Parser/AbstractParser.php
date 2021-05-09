@@ -281,6 +281,15 @@ abstract class AbstractParser
         for ($nb = 1; $nb <= \count($matches); $nb++) {
             $search[]  = '$' . $nb;
             $replace[] = $matches[$nb] ?? '';
+
+            $search[]  = '$u' . $nb;
+            $replace[] = \strtoupper($matches[$nb] ?? '');
+
+            $search[]  = '$l' . $nb;
+            $replace[] = \strtolower($matches[$nb] ?? '');
+
+            $search[]  = '$uf' . $nb;
+            $replace[] = \ucfirst($matches[$nb] ?? '');
         }
 
         return \trim(\str_replace($search, $replace, $item));
